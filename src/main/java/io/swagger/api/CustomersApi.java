@@ -21,7 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-04-03T14:57:56.068Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-04-03T15:02:07.020Z")
 
 @Api(value = "customers", description = "the customers API")
 public interface CustomersApi {
@@ -56,6 +56,6 @@ public interface CustomersApi {
     @RequestMapping(value = "/customers/{customerId}",
         produces = { "application/json" }, 
         method = RequestMethod.GET)
-    ResponseEntity<Customer> searchCustomerById(@ApiParam(value = "ID of customer your are looking for",required=true) @PathVariable("customerId") String customerId);
+    ResponseEntity<Customer> searchCustomerById(@ApiParam(value = "ID of customer your are looking for",required=true) @PathVariable("customerId") Integer customerId);
 
 }

@@ -20,7 +20,7 @@ import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-04-03T14:57:56.068Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-04-03T15:02:07.020Z")
 
 @Controller
 public class CustomersApiController implements CustomersApi {
@@ -65,7 +65,7 @@ public class CustomersApiController implements CustomersApi {
         return new ResponseEntity<List<Customer>>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<Customer> searchCustomerById(@ApiParam(value = "ID of customer your are looking for",required=true) @PathVariable("customerId") String customerId) {
+    public ResponseEntity<Customer> searchCustomerById(@ApiParam(value = "ID of customer your are looking for",required=true) @PathVariable("customerId") Integer customerId) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
