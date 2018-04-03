@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.CustomersCredentials;
-import java.math.BigDecimal;
 import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
@@ -15,22 +14,22 @@ import javax.validation.constraints.*;
  * Account
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-04-03T13:59:24.359Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-04-03T14:08:10.261Z")
 
 public class Account   {
   @JsonProperty("id")
-  private BigDecimal id = null;
+  private Integer id = null;
 
   @JsonProperty("creationDate")
-  private BigDecimal creationDate = null;
+  private Integer creationDate = null;
 
   @JsonProperty("lastUpdateDate")
-  private BigDecimal lastUpdateDate = null;
+  private Integer lastUpdateDate = null;
 
   @JsonProperty("credentials")
   private CustomersCredentials credentials = null;
 
-  public Account id(BigDecimal id) {
+  public Account id(Integer id) {
     this.id = id;
     return this;
   }
@@ -39,19 +38,18 @@ public class Account   {
    * Get id
    * @return id
   **/
-  @ApiModelProperty(example = "123.0", value = "")
+  @ApiModelProperty(example = "123", value = "")
 
-  @Valid
 
-  public BigDecimal getId() {
+  public Integer getId() {
     return id;
   }
 
-  public void setId(BigDecimal id) {
+  public void setId(Integer id) {
     this.id = id;
   }
 
-  public Account creationDate(BigDecimal creationDate) {
+  public Account creationDate(Integer creationDate) {
     this.creationDate = creationDate;
     return this;
   }
@@ -60,19 +58,18 @@ public class Account   {
    * Get creationDate
    * @return creationDate
   **/
-  @ApiModelProperty(example = "12345678 (time in ms)", value = "")
+  @ApiModelProperty(example = "12345678", value = "")
 
-  @Valid
 
-  public BigDecimal getCreationDate() {
+  public Integer getCreationDate() {
     return creationDate;
   }
 
-  public void setCreationDate(BigDecimal creationDate) {
+  public void setCreationDate(Integer creationDate) {
     this.creationDate = creationDate;
   }
 
-  public Account lastUpdateDate(BigDecimal lastUpdateDate) {
+  public Account lastUpdateDate(Integer lastUpdateDate) {
     this.lastUpdateDate = lastUpdateDate;
     return this;
   }
@@ -81,15 +78,14 @@ public class Account   {
    * Get lastUpdateDate
    * @return lastUpdateDate
   **/
-  @ApiModelProperty(example = "12345678 (time in ms)", value = "")
+  @ApiModelProperty(example = "12345678", value = "")
 
-  @Valid
 
-  public BigDecimal getLastUpdateDate() {
+  public Integer getLastUpdateDate() {
     return lastUpdateDate;
   }
 
-  public void setLastUpdateDate(BigDecimal lastUpdateDate) {
+  public void setLastUpdateDate(Integer lastUpdateDate) {
     this.lastUpdateDate = lastUpdateDate;
   }
 

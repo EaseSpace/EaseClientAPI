@@ -20,7 +20,7 @@ import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-04-03T13:59:24.359Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-04-03T14:08:10.261Z")
 
 @Controller
 public class CustomersApiController implements CustomersApi {
@@ -41,7 +41,7 @@ public class CustomersApiController implements CustomersApi {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
-                return new ResponseEntity<Customer>(objectMapper.readValue("{  \"lastUpdateDate\" : \"12345678 (time in ms)\",  \"name\" : \"My customer\",  \"id\" : 123.0,  \"accounts\" : [ {    \"credentials\" : {      \"password\" : \"eoDnhoJ\",      \"login\" : \"JohnDoe\"    },    \"lastUpdateDate\" : \"12345678 (time in ms)\",    \"id\" : 123.0,    \"creationDate\" : \"12345678 (time in ms)\"  }, {    \"credentials\" : {      \"password\" : \"eoDnhoJ\",      \"login\" : \"JohnDoe\"    },    \"lastUpdateDate\" : \"12345678 (time in ms)\",    \"id\" : 123.0,    \"creationDate\" : \"12345678 (time in ms)\"  } ],  \"creationDate\" : \"12345678 (time in ms)\"}", Customer.class), HttpStatus.NOT_IMPLEMENTED);
+                return new ResponseEntity<Customer>(objectMapper.readValue("{  \"lastUpdateDate\" : 12345678,  \"name\" : \"My customer\",  \"id\" : 123,  \"accounts\" : [ {    \"credentials\" : {      \"password\" : \"eoDnhoJ\",      \"login\" : \"JohnDoe\"    },    \"lastUpdateDate\" : 12345678,    \"id\" : 123,    \"creationDate\" : 12345678  }, {    \"credentials\" : {      \"password\" : \"eoDnhoJ\",      \"login\" : \"JohnDoe\"    },    \"lastUpdateDate\" : 12345678,    \"id\" : 123,    \"creationDate\" : 12345678  } ],  \"creationDate\" : 12345678}", Customer.class), HttpStatus.NOT_IMPLEMENTED);
             } catch (IOException e) {
                 log.error("Couldn't serialize response for content type application/json", e);
                 return new ResponseEntity<Customer>(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -55,7 +55,7 @@ public class CustomersApiController implements CustomersApi {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
-                return new ResponseEntity<List<Customer>>(objectMapper.readValue("[ {  \"lastUpdateDate\" : \"12345678 (time in ms)\",  \"name\" : \"My customer\",  \"id\" : 123.0,  \"accounts\" : [ {    \"credentials\" : {      \"password\" : \"eoDnhoJ\",      \"login\" : \"JohnDoe\"    },    \"lastUpdateDate\" : \"12345678 (time in ms)\",    \"id\" : 123.0,    \"creationDate\" : \"12345678 (time in ms)\"  }, {    \"credentials\" : {      \"password\" : \"eoDnhoJ\",      \"login\" : \"JohnDoe\"    },    \"lastUpdateDate\" : \"12345678 (time in ms)\",    \"id\" : 123.0,    \"creationDate\" : \"12345678 (time in ms)\"  } ],  \"creationDate\" : \"12345678 (time in ms)\"}, {  \"lastUpdateDate\" : \"12345678 (time in ms)\",  \"name\" : \"My customer\",  \"id\" : 123.0,  \"accounts\" : [ {    \"credentials\" : {      \"password\" : \"eoDnhoJ\",      \"login\" : \"JohnDoe\"    },    \"lastUpdateDate\" : \"12345678 (time in ms)\",    \"id\" : 123.0,    \"creationDate\" : \"12345678 (time in ms)\"  }, {    \"credentials\" : {      \"password\" : \"eoDnhoJ\",      \"login\" : \"JohnDoe\"    },    \"lastUpdateDate\" : \"12345678 (time in ms)\",    \"id\" : 123.0,    \"creationDate\" : \"12345678 (time in ms)\"  } ],  \"creationDate\" : \"12345678 (time in ms)\"} ]", List.class), HttpStatus.NOT_IMPLEMENTED);
+                return new ResponseEntity<List<Customer>>(objectMapper.readValue("[ {  \"lastUpdateDate\" : 12345678,  \"name\" : \"My customer\",  \"id\" : 123,  \"accounts\" : [ {    \"credentials\" : {      \"password\" : \"eoDnhoJ\",      \"login\" : \"JohnDoe\"    },    \"lastUpdateDate\" : 12345678,    \"id\" : 123,    \"creationDate\" : 12345678  }, {    \"credentials\" : {      \"password\" : \"eoDnhoJ\",      \"login\" : \"JohnDoe\"    },    \"lastUpdateDate\" : 12345678,    \"id\" : 123,    \"creationDate\" : 12345678  } ],  \"creationDate\" : 12345678}, {  \"lastUpdateDate\" : 12345678,  \"name\" : \"My customer\",  \"id\" : 123,  \"accounts\" : [ {    \"credentials\" : {      \"password\" : \"eoDnhoJ\",      \"login\" : \"JohnDoe\"    },    \"lastUpdateDate\" : 12345678,    \"id\" : 123,    \"creationDate\" : 12345678  }, {    \"credentials\" : {      \"password\" : \"eoDnhoJ\",      \"login\" : \"JohnDoe\"    },    \"lastUpdateDate\" : 12345678,    \"id\" : 123,    \"creationDate\" : 12345678  } ],  \"creationDate\" : 12345678} ]", List.class), HttpStatus.NOT_IMPLEMENTED);
             } catch (IOException e) {
                 log.error("Couldn't serialize response for content type application/json", e);
                 return new ResponseEntity<List<Customer>>(HttpStatus.INTERNAL_SERVER_ERROR);
