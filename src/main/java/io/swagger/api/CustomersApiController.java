@@ -20,7 +20,7 @@ import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-04-03T14:08:10.261Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-04-03T14:57:56.068Z")
 
 @Controller
 public class CustomersApiController implements CustomersApi {
@@ -63,6 +63,20 @@ public class CustomersApiController implements CustomersApi {
         }
 
         return new ResponseEntity<List<Customer>>(HttpStatus.NOT_IMPLEMENTED);
+    }
+
+    public ResponseEntity<Customer> searchCustomerById(@ApiParam(value = "ID of customer your are looking for",required=true) @PathVariable("customerId") String customerId) {
+        String accept = request.getHeader("Accept");
+        if (accept != null && accept.contains("application/json")) {
+            try {
+                return new ResponseEntity<Customer>(objectMapper.readValue("{  \"lastUpdateDate\" : 12345678,  \"name\" : \"My customer\",  \"id\" : 123,  \"accounts\" : [ {    \"credentials\" : {      \"password\" : \"eoDnhoJ\",      \"login\" : \"JohnDoe\"    },    \"lastUpdateDate\" : 12345678,    \"id\" : 123,    \"creationDate\" : 12345678  }, {    \"credentials\" : {      \"password\" : \"eoDnhoJ\",      \"login\" : \"JohnDoe\"    },    \"lastUpdateDate\" : 12345678,    \"id\" : 123,    \"creationDate\" : 12345678  } ],  \"creationDate\" : 12345678}", Customer.class), HttpStatus.NOT_IMPLEMENTED);
+            } catch (IOException e) {
+                log.error("Couldn't serialize response for content type application/json", e);
+                return new ResponseEntity<Customer>(HttpStatus.INTERNAL_SERVER_ERROR);
+            }
+        }
+
+        return new ResponseEntity<Customer>(HttpStatus.NOT_IMPLEMENTED);
     }
 
 }
